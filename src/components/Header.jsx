@@ -2,8 +2,10 @@ import React from 'react';
 
 function Header() {
   return (
-    <header className="Header">
-      João Lage Dev
+    <header>
+      <h1>
+        João Lage Dev
+      </h1>
     </header>
   );
 }
