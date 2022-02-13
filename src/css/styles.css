@@ -251,6 +251,10 @@ header a:hover {
   width: 65%;
 }
 
+.contact h1 {
+  color: cornsilk;
+}
+
 .contact nav {
   width: 20%;
 }
