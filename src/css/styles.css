@@ -1,14 +1,17 @@
 * {
   padding: 0;
   margin: 0;
-
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
   width: 100%;
   height: 100%;
   background-color: #1e1a1a;
+}
+
+h1 {
+  padding: 20px;
+  color: darkgray;
 }
 
 header {
@@ -18,18 +21,30 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 50px;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  scroll-behavior: smooth;
   background-color: #0a0a16;
 }
 
-header h1 {
-  color: cornsilk;
+header .nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  width: 65%;
 }
 
-.main-content {
+header .nav-language-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,15 +54,251 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 200px;
+  width: 35%;
 }
 
-.main-content section {
-  width: 800px;
-  border: 1px solid green;
+header .nav-language-buttons button {
+  margin: 5px;
+  border-radius: 20%;
 }
 
-.main-content h3 {
+header .nav-language-buttons button.selected-btn {
+  border: solid 5px green;
+}
+
+header .nav-language-buttons button:hover {
+  color: #a5a5a5;
+  cursor: pointer;
+}
+
+header .nav-home {
+  text-align: center;
+  width: 50%;
+}
+
+header .nav-links {
+  width: 50%;
+}
+
+header .nav-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header a {
+  color: cornsilk;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+header a:hover {
+  color: #a5a5a5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+}
+
+.home img {
+  width: 25%;
+}
+
+.about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 300px;
+  padding-bottom: 400px;
   color: darkgray;
+}
+
+.about-content section {
+  height: 100%;
+}
+
+.about-content p {
+  font-size: 30px;
+}
+
+.skills-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 75px;
+  padding-bottom: 400px;
+}
+
+.skills-content h2 {
+  color: darkgray;
+  padding-bottom: 50px;
+}
+
+.skills-content section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: _;
+  padding-bottom: _;
+}
+
+.skills-content img {
+  height: 80px;
+  padding: 10px;
+}
+
+.portfolio-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 75px;
+  padding-bottom: _;
+}
+
+.portfolio-content section p {
+  color: #a5a5a5;
+  font-size: xx-large;
+  height: 830px;
+}
+
+.nav-to-home-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 65%;
+}
+
+.contact nav {
+  width: 20%;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 300px;
+  padding-bottom: _;
+  color: #a5a5a5;
+  width: 100%;
+}
+
+.contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+}
+
+.contact-form form input {
+  text-align: center;
+  height: 50px;
+}
+
+.contact-form form textarea {
+  text-align: center;
+  height: 50px;
+}
+
+.contact-form form button {
+  height: 50px;
 }
 /*# sourceMappingURL=styles.css.map */
