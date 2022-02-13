@@ -1,14 +1,15 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 import {  } from "./css/styles.css";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Main />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
   );
 }
 
