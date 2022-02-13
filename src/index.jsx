@@ -1,10 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOM from "react-dom";
 import App from './App';
+import PortifolioProvider from './context/PortfolioProvider';
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter>
+      <PortifolioProvider>
+        <App />
+      </PortifolioProvider>
+    </BrowserRouter>,
   document.getElementById('root')
 );
