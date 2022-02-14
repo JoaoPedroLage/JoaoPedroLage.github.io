@@ -11,18 +11,20 @@ function Header() {
     <header>
       <div className="nav-language-buttons">
           <img src={ translate } alt="translate change" />
-          <button
-            className={isEnglish ? 'selected-btn' : ''} 
-            onClick={ () => setIsEnglish(true) }
-          >
-            EN-US
-          </button>
-          <button
-            className={!isEnglish ? 'selected-btn' : ''} 
-            onClick={ () => setIsEnglish(false) }
-          >
-            PT-BR
-          </button>
+          <div className="nav-buttons">
+            <button
+              className={isEnglish ? 'selected-btn' : ''} 
+              onClick={ () => setIsEnglish(true) }
+            >
+              EN-US
+            </button>
+            <button
+              className={!isEnglish ? 'selected-btn' : ''} 
+              onClick={ () => setIsEnglish(false) }
+            >
+              PT-BR
+            </button>
+          </div>
       </div>
       <nav className="nav-header">
         <div className="nav-home">

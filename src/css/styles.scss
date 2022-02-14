@@ -299,7 +299,7 @@ header {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 590px) {
 
   header {
     height: 120px;
@@ -316,11 +316,24 @@ header {
     }
 
     .nav-language-buttons {
+      display: flex;
+      flex-direction: column;
+
+      .nav-buttons {
+        flex-direction: row;
+      }
+
       button {
         margin-left: 5px;
         width: 40px;
         height: 40px;
       }
+    }
+  }
+
+  .home {
+    img {
+      width: 300px;
     }
   }
 }
