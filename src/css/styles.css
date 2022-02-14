@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  padding: 20px;
+  padding: 2rem;
   color: darkgray;
 }
 
@@ -95,7 +95,7 @@ header .nav-links ul {
 header a {
   color: cornsilk;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 26px;
 }
 
 header a:hover {
