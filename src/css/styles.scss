@@ -235,7 +235,7 @@ header {
 
 @media (max-width: 1200px) {
   header {
-    height: 80px;
+    height: 100;
   }
 
   .nav-links {
@@ -296,5 +296,31 @@ header {
   .nav-lateral-menu.active .hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
+  }
+}
+
+@media (max-width: 575px) {
+
+  header {
+    height: 120px;
+
+    a {
+      font-size: 26px;
+    }
+
+    .nav-language-buttons {
+      img {
+        width: 50px;
+        margin-right: 5px;
+      }
+    }
+
+    .nav-language-buttons {
+      button {
+        margin-left: 5px;
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
