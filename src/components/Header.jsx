@@ -44,7 +44,7 @@ function Header() {
                 smooth={true}
                 duration={500}
               >
-                { isEnglish ? 'About ' : 'Sobre' }
+                { isEnglish ? 'About Me' : 'Sobre Mim' }
               </Link>
             </li>
             <li>
