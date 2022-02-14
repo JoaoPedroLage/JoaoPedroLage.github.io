@@ -1,5 +1,5 @@
 import React from 'react'
-import profileImg from '../images/profile.gif';
+import profileImg from '../images/profileImg.gif';
 
 export default function Home() {
   return (

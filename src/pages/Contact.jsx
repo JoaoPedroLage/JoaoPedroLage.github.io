@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import PortfolioContext from '../context/PortfolioContext';
 import { Link as LinkPage } from "react-router-dom";
+import translate from "../images/translate.png";
 
 export default function Contact() {
   const { isEnglish, setIsEnglish } = useContext(PortfolioContext);
@@ -10,6 +11,7 @@ export default function Contact() {
       <header>
         <div className="nav-to-home-contact">
           <div className="nav-language-buttons">
+            <img src={ translate } alt="translate change" />
             <button
               className={isEnglish ? 'selected-btn' : ''} 
               onClick={ () => setIsEnglish(true) }

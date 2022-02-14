@@ -25,8 +25,10 @@ header {
       -ms-flex-pack: _;
           justify-content: _;
   width: 100%;
-  height: 60px;
+  height: 65px;
   position: fixed;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
   background-color: #0a0a16;
 }
@@ -57,9 +59,15 @@ header .nav-language-buttons {
   width: 35%;
 }
 
+header .nav-language-buttons img {
+  width: 75px;
+}
+
 header .nav-language-buttons button {
   margin: 5px;
-  border-radius: 20%;
+  height: 50px;
+  width: 55px;
+  border-radius: 50%;
 }
 
 header .nav-language-buttons button.selected-btn {
@@ -76,11 +84,22 @@ header .nav-home {
   width: 50%;
 }
 
-header .nav-links {
+header a {
+  color: cornsilk;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+header .nav-lateral-menu {
   width: 50%;
 }
 
-header .nav-links ul {
+header .nav-lateral-menu img {
+  width: 50px;
+  height: 40px;
+}
+
+header .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,9 +109,10 @@ header .nav-links ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100%;
 }
 
-header a {
+header .nav-links a {
   color: cornsilk;
   text-decoration: none;
   font-size: 20px;
@@ -114,11 +134,11 @@ header a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 100px;
+  padding-top: 200px;
 }
 
 .home img {
-  width: 25%;
+  width: 500px;
 }
 
 .about-content {
@@ -137,6 +157,8 @@ header a:hover {
           flex-direction: column;
   padding-top: 300px;
   padding-bottom: 400px;
+  padding-left: 10%;
+  width: 80%;
   color: darkgray;
 }
 
@@ -167,6 +189,7 @@ header a:hover {
 }
 
 .skills-content h2 {
+  text-align: center;
   color: darkgray;
   padding-bottom: 50px;
 }
@@ -187,6 +210,9 @@ header a:hover {
           flex-direction: column;
   padding-top: _;
   padding-bottom: _;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .skills-content img {
@@ -304,5 +330,99 @@ header a:hover {
 
 .contact-form form button {
   height: 50px;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.5rem;
+}
+
+.btn-mobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  header {
+    height: 80px;
+  }
+  .nav-links {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e7e7e7;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .nav-lateral-menu.active .nav-links {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .nav-links a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  .btn-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: _;
+        -ms-flex-align: _;
+            align-items: _;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  .hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    padding-left: 50%;
+    padding-right: 50%;
+  }
+  .hamburger::after,
+  .hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: relative;
+  }
+  .nav-lateral-menu.active .hamburger {
+    border-top-color: transparent;
+  }
+  .nav-lateral-menu.active .hamburger::before {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .nav-lateral-menu.active .hamburger::after {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+    top: -7px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

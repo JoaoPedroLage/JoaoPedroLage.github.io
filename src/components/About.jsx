@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="about-content">
       <h1>
-        { isEnglish ? 'About' : 'Sobre' }
+        { isEnglish ? 'About Me' : 'Sobre Mim' }
       </h1>
       <section>
         
